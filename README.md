@@ -21,9 +21,7 @@ including Tibco Business Transactions such as Job Number.
 | |1 System Profile  
 | |1 Plugin  
 | |2 Dashboards
-| Download | 
-  
-[Tibco.dtp](Tibco.dtp)
+| Download | [Tibco.dtp](Tibco.dtp)
 
 ## Content
 
