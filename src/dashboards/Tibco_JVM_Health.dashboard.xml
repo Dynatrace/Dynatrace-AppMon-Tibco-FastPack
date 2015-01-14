@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="5.5.0.5226" date="8/20/13 1:01 PM">
+  <dashboardconfig memento.version="5.5.0.5226" icon="com.dynatrace.diagnostics.portlets/icons/chart_portlet_type.png" localizationenabled="false" sessiontype="stored" locationassource="false" groupname="" authorname="DMADEB0" opendrilldowninnewdashboard="false" sessionid="Monitoring/20120829133611_0.session" autoreplacesession="false" modified="2013-08-20T13:01:31-0400" id="7e83f6ad-12ea-4a8b-801b-174b0b7ddf91" revision="00000140-9cac-967a-a972-0cad176df781" source="server://bos123795n01" created="2013-08-20T13:01:31-0400" description="" name="Tibco_JVM_Health" modifiedbyname="DMADEB0" locationascomparesource="false">
+    <reportconfig lines.per.table="100" enabled="true" print.legends="true" orientation="portrait" pagesize="A4" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" optimizeequalcolumns="true" type="PDF" title="" override="false" levels.per.tree="10" description="" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" print.images="true" />
+    <filter>
+      <criterion completepurepath="true" type="agents" mode="all">
+        <textpattern enabled="true" name="agentname" type="contains" />
+        <textpattern enabled="true" name="agenthost" type="contains" />
+      </criterion>
+      <criterion type="and" />
+      <criterion excludeexternalsubpaths="false" type="api" mode="all" />
+      <criterion type="applications" mode="all" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" showjavascript="true" type="browserpathtype" />
+      <criterion timerenabled="false" pageenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern text="" match="contains" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern text="" match="contains" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion filterinterval="false" intervalend="0" type="dcrumdimension" intervalstart="0" />
+      <criterion isactive="true" analyzeserverpath="true" type="enduserpath" analyzeenduserpath="true" />
+      <criterion completepurepath="true" type="hosts" mode="all" />
+      <criterion severities="" statesmode="all" severitiesmode="all" states="" rulesmode="all" type="incident" />
+      <criterion type="or" />
+      <criterion enduser="false" type="purepaths" mode="all" />
+      <criterion showrendering="true" isactive="false" contenttypegroupsmode="all" javascripttriggersmode="all" shownetwork="true" showjavascript="true" type="riapurepathtype" requestcriterion="ALL" />
+      <criterion includemeasurename="true" includetestname="true" type="tests" teststatus="OK" />
+      <criterion enabled="false" filterbyid="false" type="threads" />
+      <criterion type="timeframe">
+        <timeframe type="Last 30min" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset visitsidsetsize="0" />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern enabled="true" name="timerName" type="contains" />
+        <textpattern enabled="true" name="pageContext" type="contains" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern text="" match="contains" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern text="" match="contains" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+    <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" descriptionfontsize="8" nameshow="true" clienttheme="DEFAULT" headertype="DEFAULT" namefontsize="10" descriptionshow="true" autoadjustfontsizes="false" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+    <dashboardlayout>
+      <portletfolder relationtype="LEFT" ratio="0.95" folderid="org.eclipse.ui.internal.ViewStack@e8aa4" selectionindex="0" relatedfolderid="DashboardLayout.blankArea" portletconfigorder="e09b9aca-bc2d-4860-bc20-788399e4f452">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="HEADLESS" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.05821918" folderid="86400803-91eb-486c-9734-b3643e43e026" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@e8aa4" portletconfigorder="32e6a6d7-bc85-4abf-8add-48493663ff46">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.4996717" folderid="org.eclipse.ui.internal.ViewStack@4f9b46" selectionindex="0" relatedfolderid="86400803-91eb-486c-9734-b3643e43e026" portletconfigorder="e72d9c8a-c786-4f19-94d1-4e3afb512f75">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.639201" folderid="org.eclipse.ui.internal.ViewStack@1c721be" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@4f9b46" portletconfigorder="27ad2ec3-d55c-423c-88ea-378c9ed451a1">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.30268198" folderid="org.eclipse.ui.internal.ViewStack@14f3a21" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@4f9b46" portletconfigorder="046be48a-4949-4687-a3ee-cfebd1d4dd85">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="HEADLESS" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.6004994" folderid="org.eclipse.ui.internal.ViewStack@1c11a9b" selectionindex="0" relatedfolderid="86400803-91eb-486c-9734-b3643e43e026" portletconfigorder="e27d7159-474e-47bf-a955-5b65fa462c76">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.5" folderid="org.eclipse.ui.internal.ViewStack@8a13e6" selectionindex="0" relatedfolderid="86400803-91eb-486c-9734-b3643e43e026" portletconfigorder="68e4fb86-55a2-4ea0-a3e8-47bb2afdffe0">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="center" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@e8aa4" locationassource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" id="e09b9aca-bc2d-4860-bc20-788399e4f452" addfilterinfo="false" source="server://bos123795n01" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" description="" name="Text and Image" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="7" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="12" style="NORMAL" name="Segoe UI" />
+      <image length="3148" offset="-1">
+        <chunk data="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" offset="0" />
+      </image>
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@1c11a9b" sessiontype="stored" locationassource="false" usedashboardsource="true" sessionid="Monitoring/20120829133611_0.session" id="e27d7159-474e-47bf-a955-5b65fa462c76" addfilterinfo="false" source="server://bos123795n01" description="" lastvalue="false" name="Garbage Collection Utilization" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="3" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="false" limititems="false" axis.x.show="true" axis.x.title.show="false" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="stored" colorinheritancemode="random" aggregationtype="Avg" uiunit="percent" groupingvalue="" id="867571df-12f8-4ffb-b5d9-ad14cc6bb044" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Total GC Utilization" sourcecolor="RGB(64,128,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Monitoring/20120829133611_0.session" groupingcriterion="AgentOrMonitor" displayrate="10s" systemid="Monitoring/20120829133611_0.session" unit="percent" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Total GC Utilization" metricgroupkey="Java Virtual Machine" collector="" systemid="Monitoring/20120829133611_0.session" application="" agenthost="" parentkeyid="Total GC Utilization" measuretype="Measure" metrickeyid="Total GC Utilization" agentname="" metricsimpledisplayname="Total GC Utilization" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@4f9b46" sessiontype="stored" locationassource="false" usedashboardsource="true" sessionid="Monitoring/20120829133611_0.session" id="e72d9c8a-c786-4f19-94d1-4e3afb512f75" addfilterinfo="false" source="server://bos123795n01" description="" lastvalue="false" name="Tibco Alerts" typeid="com.dynatrace.diagnostics.portlets.chart.Incident" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="5" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <table drawcolumn="-1" sortcolumn="2" structuremode="hierarchicalincident" columnorder="0,1,2,3,4,5,6,7">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="20" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="120" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="120" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="60" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="true" width="120" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="120" />
+        </table>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="IncidentTrafficLight" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="false" limititems="false" axis.x.show="true" axis.x.title.show="false" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" measure="true">
+            <pielabelcomposition unit="true" measure="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="stored" dynamicconfig="false" sessionid="Monitoring/20120829133611_0.session" id="adaf345b-3495-4912-a0a3-3e8d143ed7da" displayrate="10s" systemid="Monitoring/20120829133611_0.session" overridesource="false" name="Application Process Out-of-Memory" sourcetype="INCIDENT_RULE" autoscale="false">
+            <incidentrule id="Application Process Out-of-Memory" flags="1" incidentdashboardname="Incident Dashboard" description="Application Process reported Out-of-memory. A Memory Dump will be automatically triggered if not disabled in the Agent group settings." timeframe="10">
+              <sensitivity id="perViolation" duration="0" minnonviolatedperiod="60" delay="0" />
+              <actions>
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.logging" smartalert="false" severity="severe" type="Logging Notification" refaction="com.dynatrace.diagnostics.logging" key="com.dynatrace.diagnostics.logging" execution="begin" roletype="1" />
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" smartalert="false" severity="informational" type="Email Notification" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" key="com.dynatrace.diagnostics.plugins.EmailNotification" execution="begin" roletype="1">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource position="3" scale="0" visible="true" sessiontype="stored" dynamicconfig="false" sessionid="Monitoring/20120829133611_0.session" id="e0fdeee9-9554-48bc-a401-9967effe800c" displayrate="10s" systemid="Monitoring/20120829133611_0.session" overridesource="false" name="Failure rate too high" sourcetype="INCIDENT_RULE" autoscale="false">
+            <incidentrule id="Failure rate too high" flags="1" incidentdashboardname="Incident Dashboard" description="The rate of failed transactions is significantly higher than expected." timeframe="10">
+              <sensitivity id="perViolation" duration="0" minnonviolatedperiod="60" delay="0" />
+              <actions>
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.logging" smartalert="false" severity="severe" type="Logging Notification" refaction="com.dynatrace.diagnostics.logging" key="com.dynatrace.diagnostics.logging" execution="begin" roletype="1" />
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" smartalert="false" severity="informational" type="Email Notification" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" key="com.dynatrace.diagnostics.plugins.EmailNotification" execution="begin" roletype="1">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource position="4" scale="0" visible="true" sessiontype="stored" dynamicconfig="false" sessionid="Monitoring/20120829133611_0.session" id="63addf82-854c-4233-8c5b-fc1d85fefea4" displayrate="10s" systemid="Monitoring/20120829133611_0.session" overridesource="false" name="Average response time degraded" sourcetype="INCIDENT_RULE" autoscale="false">
+            <incidentrule id="Average response time degraded" flags="1" incidentdashboardname="Incident Dashboard" description="The average response time (median) is significantly higher than expected. Although the observed response time might be still acceptable for users, this behavior is typically caused by application or infrastructure problems and reduces the maximum throughput you can achieve." timeframe="10">
+              <sensitivity id="perViolation" duration="0" minnonviolatedperiod="60" delay="0" />
+              <actions>
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.logging" smartalert="false" severity="severe" type="Logging Notification" refaction="com.dynatrace.diagnostics.logging" key="com.dynatrace.diagnostics.logging" execution="begin" roletype="1" />
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" smartalert="false" severity="informational" type="Email Notification" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" key="com.dynatrace.diagnostics.plugins.EmailNotification" execution="begin" roletype="1">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource position="2" scale="0" visible="true" sessiontype="stored" dynamicconfig="false" sessionid="Monitoring/20120829133611_0.session" id="7cbf6d9b-af1a-4929-a6b0-de42d75bbdf6" displayrate="10s" systemid="Monitoring/20120829133611_0.session" overridesource="false" name="Application Process Unavailable (unexpected)" sourcetype="INCIDENT_RULE" autoscale="false">
+            <incidentrule id="Application Process Unavailable (unexpected)" flags="1" incidentdashboardname="Incident Dashboard" description="Connection to a previously connected Application Process/Agent has been lost." timeframe="10">
+              <sensitivity id="perViolation" duration="0" minnonviolatedperiod="60" delay="0" />
+              <actions>
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.logging" smartalert="false" severity="severe" type="Logging Notification" refaction="com.dynatrace.diagnostics.logging" key="com.dynatrace.diagnostics.logging" execution="begin" roletype="1" />
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" smartalert="false" severity="informational" type="Email Notification" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" key="com.dynatrace.diagnostics.plugins.EmailNotification" execution="beginAndEnd" roletype="1">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+      </datamodelconfig>
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@14f3a21" sessiontype="stored" locationassource="false" usedashboardsource="true" sessionid="Monitoring/20120829133611_0.session" id="046be48a-4949-4687-a3ee-cfebd1d4dd85" addfilterinfo="false" source="server://bos123795n01" description="" lastvalue="false" name="CPU Usage" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="6" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="false" limititems="false" axis.x.show="true" axis.x.title.show="false" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="stored" colorinheritancemode="random" aggregationtype="Avg" uiunit="percent" groupingvalue="" id="3225dd69-13d2-4e10-880d-33b2960802e7" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Current CPU load" sourcecolor="RGB(128,64,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Monitoring/20120829133611_0.session" groupingcriterion="AgentOrMonitor" displayrate="10s" systemid="Monitoring/20120829133611_0.session" unit="percent" measuretype="ProcessPerformanceMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Current CPU load" metricgroupkey="Process Performance" collector="" systemid="Monitoring/20120829133611_0.session" application="" agenthost="" parentkeyid="Current CPU load" measuretype="ProcessPerformanceMeasure" metrickeyid="Current CPU load" agentname="" metricsimpledisplayname="Current CPU load" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@1c721be" sessiontype="stored" locationassource="false" usedashboardsource="true" sessionid="Monitoring/20120829133611_0.session" id="27ad2ec3-d55c-423c-88ea-378c9ed451a1" addfilterinfo="false" source="server://bos123795n01" description="" lastvalue="false" name="Thread Count Usage" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="4" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="false" limititems="false" axis.x.show="true" axis.x.title.show="false" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="stored" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="99282544-c2b5-4a7c-a0e6-66e4f7fe9b96" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Thread Count" sourcecolor="RGB(128,192,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Monitoring/20120829133611_0.session" groupingcriterion="AgentOrMonitor" displayrate="10s" systemid="Monitoring/20120829133611_0.session" unit="number" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Thread Count" metricgroupkey="Java Virtual Machine" collector="" systemid="Monitoring/20120829133611_0.session" application="" agenthost="" parentkeyid="Thread Count" measuretype="Measure" metrickeyid="Thread Count" agentname="" metricsimpledisplayname="Thread Count" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="86400803-91eb-486c-9734-b3643e43e026" sessiontype="stored" locationassource="false" usedashboardsource="true" sessionid="Monitoring/20120829133611_0.session" id="32e6a6d7-bc85-4abf-8add-48493663ff46" addfilterinfo="false" source="server://bos123795n01" description="" lastvalue="false" name="Memory Utilization" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="false" limititems="false" axis.x.show="true" axis.x.title.show="false" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="stored" colorinheritancemode="random" aggregationtype="Avg" uiunit="percent" groupingvalue="" id="63bf730e-6bff-4b46-8732-ba9ca9d63bfc" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Memory Utilization" sourcecolor="RGB(0,192,128,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Monitoring/20120829133611_0.session" groupingcriterion="AgentOrMonitor" displayrate="10s" systemid="Monitoring/20120829133611_0.session" unit="percent" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Memory Utilization" metricgroupkey="Java Virtual Machine" collector="" systemid="Monitoring/20120829133611_0.session" application="" agenthost="" parentkeyid="Memory Utilization" measuretype="Measure" metrickeyid="Memory Utilization" agentname="" metricsimpledisplayname="Memory Utilization" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@8a13e6" sessiontype="stored" locationassource="false" usedashboardsource="true" sessionid="Monitoring/20120829133611_0.session" id="68e4fb86-55a2-4ea0-a3e8-47bb2afdffe0" addfilterinfo="false" source="server://bos123795n01" description="" lastvalue="false" name="Free Memory" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="1" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="false" limititems="false" axis.x.show="true" axis.x.title.show="false" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="stored" colorinheritancemode="random" aggregationtype="Max" uiunit="megabytes" groupingvalue="" id="ac2508f6-cb0e-47ff-b1c6-5c2da43202dc" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Free Memory" sourcecolor="RGB(192,128,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Monitoring/20120829133611_0.session" groupingcriterion="AgentOrMonitor" displayrate="10s" systemid="Monitoring/20120829133611_0.session" unit="megabytes" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Memory" metricgroupkey="Java Virtual Machine" collector="" systemid="Monitoring/20120829133611_0.session" application="" agenthost="" parentkeyid="Free Memory" measuretype="Measure" metrickeyid="Free Memory" agentname="" metricsimpledisplayname="Free Memory" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+
